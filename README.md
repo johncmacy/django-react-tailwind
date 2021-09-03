@@ -1,14 +1,10 @@
-# django-basic
+# django-react-tailwind
 
 ## About
 
-This is a basic Django project that includes:
+This is a Django + React project that builds on **django-react** with the following features:
 
-* Users app for user registration, authentication, etc.
-* User model that extends the built-in User model by subclassing AbstractUser
-* Project-level templates and static folders
-* Base HTML templates
-* site.css
+* Tailwind CSS
 
 ## Getting Started
 
@@ -31,9 +27,15 @@ This is a basic Django project that includes:
 
 1. In the terminal, run `py -m venv env` to set up a virtual environment named "env".
 2. Activate the virtual environment with `env/scripts/activate`.
-3. Run `py -m pip install requirements.txt`.
+3. Run `py -m pip install -r requirements.txt`.
 4. Create a new "db.sqlite3" file.
 5. Run `py manage.py migrate` to initialize the database tables.
 6. Create a superuser record for yourself by running `py manage.py createsuperuser`, and follow the prompts for username, email, and password.
 7. Run the server (with `py manage.py runserver`, or F5 once you've set up a "launch.json" file).
 8. Navigate to http://127.0.0.1:8000/ to verify that it is working. You should see a welcome page, with links for Home, Profile, and Admin in the navbar.
+
+### Set up Node environment
+1. Run `npm install` from project root (same directory where package.json and package-lock.json are located)
+2. To make sure it's working:
+    a. Change the `alert()` text in the `<Button />` component of App.js. Then, run `npm run dev` to rebuild the bundle and test in browser.
+    b. Create a custom class in `tailwind.css`, apply it to a React component, run `npm run build:css`, then reload the browser to see the changes take effect.
