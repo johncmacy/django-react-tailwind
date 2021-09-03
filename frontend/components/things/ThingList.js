@@ -5,9 +5,9 @@ export default function ThingList() {
   const { query, things } = useThings()
 
   return (
-    <div>
+    <ul className="my-3">
       {query.isFetching ? 'loading...' : null}
-      {things.map(thing => <div key={thing.id}>{thing.color}</div>)}
-    </div>
+      {things.map(thing => <li key={thing.id}>{thing.color}</li>)}
+    </ul>
   )
 }

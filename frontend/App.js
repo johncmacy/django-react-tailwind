@@ -1,6 +1,7 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import Button from './components/Button'
+import Navbar from './components/nav/Navbar'
 import ThingList from './components/things/ThingList'
 
 export default function App() {
@@ -8,12 +9,12 @@ export default function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
-        <h1>App</h1>
-        <a href="/profile">Profile</a>
-        <a href="/login">Login</a>
-        <a href="/logout">Logout</a>
-        <Button text="Click me" onClick={(e) => alert("hello")} />
+        <Navbar />
+
+      <div className="container">
+        <div className="my-5 text-center">
+          <Button text="Click me" onClick={(e) => alert("test")} />
+        </div>
 
         <ThingList />
       </div>

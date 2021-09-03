@@ -2,9 +2,16 @@
 {% load static %}
 
 {% block body %}
-    <div id="app"></div>
+<div id="app"></div>
 {% endblock %}
 
 {% block static %}
-    <script src="{% static 'js/frontend-build.js' %}"></script>
+<script>
+    const USER = {
+        isAuthenticated: {% if user.is_authenticated %}true{% else %}false{% endif %},
+        username: '{{ user.get_username }}',
+        fullName: '{{ user.get_full_name }}',
+    };
+</script>
+<script src="{% static 'js/frontend-build.js' %}"></script>
 {% endblock %}
