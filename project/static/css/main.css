@@ -31908,6 +31908,13 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.btn-secondary {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #d1d5db;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(209, 213, 219, 0));
+  --tw-gradient-to: #6b7280;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
